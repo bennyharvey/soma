@@ -1,0 +1,31 @@
+cuda_visible_devices: 0
+detector_model_path: /usr/share/zurabiy/models/mmod_human_face_detector.dat
+shaper_model_path: /usr/share/zurabiy/models/shape_predictor_5_face_landmarks.dat
+recognizer_model_path: /usr/share/zurabiy/models/dlib_face_recognition_resnet_model_v1.dat
+jittering: 10
+rabbitmq_uri: amqp://guest:guest@127.0.0.1:5672
+rabbitmq_exchange: zurabiy
+postgres_uri: postgres://skuder:skuder@localhost:5432/skuder?sslmode=disable
+detection_confidence_limit: 0.9
+descriptors_match_distance: 0.45
+passage_openers:
+  some_passage_id:
+    type: passage_type # sigur | z5r
+    address: passage_opener_address # each passage_type has own format
+    direction: passage_open_direction # in | out
+    wait_after_open: 5s
+  some_passage_id_2:
+    type: passage_type # sigur | z5r
+    address: passage_opener_address # each passage_type has own format
+    direction: passage_open_direction # in | out
+    wait_after_open: 5s
+photo_storage_path: /some_path
+web_server:
+  bind_addr: :443
+  jwt_signing_key: some_long_secret
+  tls_crt_file_path: /etc/zurabiy/skuder.crt
+  tls_key_file_path: /etc/zurabiy/skuder.key
+  debug: false
+  passage_names:
+    some_passage_id: Some Passage Name
+    some_passage_id_2: Some Passage 2 Name

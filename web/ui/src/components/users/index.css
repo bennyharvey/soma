@@ -1,0 +1,19 @@
+#users-container .row {
+    margin-top: 1rem;
+}
+
+#users-container .manage-col {
+    width: 15rem;
+}
+
+#users-container table button {
+    margin-right: .3rem;
+}
+
+#users-container tr, #users-container td {
+    vertical-align: middle !important;
+}
+
+#users-container button:last-child {
+    margin-right: 0;
+}

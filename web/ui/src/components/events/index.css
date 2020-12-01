@@ -1,0 +1,20 @@
+#events-container .row {
+    margin-top: 1rem;
+}
+
+#events-container .react-datetime-picker > div {
+    border: none;
+}
+
+#events-container .pager {
+    max-width: 15em;
+    margin: 0 auto 1em auto;
+}
+
+#events-container .event-info {
+    display: flex;
+}
+
+#events-container .event-info-data {
+    padding: 0.5em;
+}

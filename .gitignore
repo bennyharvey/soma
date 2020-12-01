@@ -1,0 +1,6 @@
+*-packr.go
+rice-box.go
+build
+cmd/facer/facer
+cmd/skuder/skuder
+cmd/streamer/streamer

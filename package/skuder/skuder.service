@@ -1,0 +1,12 @@
+[Unit]
+Description=Zurabiy skuder
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/skuder -c /etc/zurabiy/skuder.conf
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

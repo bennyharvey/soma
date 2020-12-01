@@ -1,0 +1,8 @@
+cuda_visible_devices: 0
+shaper_model_path: /usr/share/zurabiy/models/shape_predictor_5_face_landmarks.dat
+recognizer_model_path: /usr/share/zurabiy/models/dlib_face_recognition_resnet_model_v1.dat
+jittering: 10
+rabbitmq_uri: amqp://guest:guest@127.0.0.1:5672
+rabbitmq_exchange: zurabiy
+passage_id: some_unqiue_string_id
+confidence_limit: 0.9

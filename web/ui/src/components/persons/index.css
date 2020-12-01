@@ -1,0 +1,68 @@
+#persons-container .row {
+    margin-top: 1rem;
+}
+
+#persons-container .manage-col {
+    width: 13rem;
+}
+
+#persons-container table button {
+    margin-right: .3rem;
+}
+
+#persons-container tr, #persons-container td {
+    vertical-align: middle !important;
+}
+
+#persons-container button:last-child {
+    margin-right: 0;
+}
+
+#person-modal .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: -0.3em
+}
+
+#person-modal .photos .photo {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3em;
+}
+
+#person-modal .photos .photo .image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 9em;
+    height: 9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#person-modal .photos .photo .image .error {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: red;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+#person-modal .photos .photo button {
+    margin-top: 0.5em;
+}
+
+
+#person-modal .new-photo-dropzone {
+    width: 9em;
+    height: 9em;
+    border: dashed;
+    border-color: #eeeeee;
+    background-color: #fafafa;
+    color: #bdbdbd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
