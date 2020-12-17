@@ -128,7 +128,10 @@ func NewServer(bindAddr, jwtSigningKey, tlsCrtFilePath, tlsKeyFilePath string, d
 	aa := e.Group("/api", middleware.JWTWithConfig(middleware.JWTConfig{
 		SigningKey:  []byte(jwtSigningKey),
 		Claims:      &jwtClaims{},
-		TokenLookup: "cookie:auth",
+		// TokenLookup: "cookie:auth",
+		// TokenLookup:   "header:" + echo.HeaderAuthorization,
+		TokenLookup:   "query:token",
+		// AuthScheme:    "Bearer",
 		ErrorHandler: func(err error) error {
 			return &echo.HTTPError{
 				Code:    http.StatusUnauthorized,
@@ -215,7 +218,8 @@ func NewServer(bindAddr, jwtSigningKey, tlsCrtFilePath, tlsKeyFilePath string, d
 			default:
 			}
 
-			err := s.echo.StartTLS(bindAddr, tlsCrtFilePath, tlsKeyFilePath)
+			// err := s.echo.StartTLS(bindAddr, tlsCrtFilePath, tlsKeyFilePath)
+			err := s.echo.Start(bindAddr)
 			if err != nil {
 				if err == http.ErrServerClosed {
 					return
