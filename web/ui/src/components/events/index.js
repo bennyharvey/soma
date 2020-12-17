@@ -87,7 +87,7 @@ const Events = ({ loadEvents, loadPassageNames, ...props }) => {
     // })
 
     return (
-        <Container id='events-container'>
+        <div>
             <Row>
                 <Col>
                     <Form.Row>
@@ -190,7 +190,7 @@ const Events = ({ loadEvents, loadPassageNames, ...props }) => {
                     </InputGroup>
                 </Col>
             </Row>
-        </Container>
+        </div>
     )
 }
 

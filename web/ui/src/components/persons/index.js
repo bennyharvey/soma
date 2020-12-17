@@ -269,7 +269,7 @@ const Persons = ({ loadPersons, ...props }) => {
                             <tr>
                                 <th>ID</th>
                                 <th>Имя</th>
-                                <th>Должность</th>
+                                <th>Тип досье</th>
                                 <th>Подразделение</th>
                                 <th className='manage-col'>Управление</th>
                             </tr>

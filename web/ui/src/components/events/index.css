@@ -1,4 +1,4 @@
-#events-container .row {
+/* #events-container .row {
     margin-top: 1rem;
 }
 
@@ -17,4 +17,8 @@
 
 #events-container .event-info-data {
     padding: 0.5em;
+} */
+
+.event-info-photo{
+    width: 100px;
 }

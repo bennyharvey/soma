@@ -1,4 +1,4 @@
-#persons-container .row {
+/* #persons-container .row {
     margin-top: 1rem;
 }
 
@@ -16,7 +16,7 @@
 
 #persons-container button:last-child {
     margin-right: 0;
-}
+} */
 
 #person-modal .photos {
     display: flex;

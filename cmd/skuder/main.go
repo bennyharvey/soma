@@ -16,7 +16,8 @@ import (
 	"github.com/bennyharvey/soma/rmq"
 	"github.com/bennyharvey/soma/sigur"
 	"github.com/bennyharvey/soma/skuder"
-	"github.com/bennyharvey/soma/web"
+	// "github.com/bennyharvey/soma/web"
+	"../../web"
 	"github.com/bennyharvey/soma/z5r"
 	"github.com/bennyharvey/soma/beward"
 )

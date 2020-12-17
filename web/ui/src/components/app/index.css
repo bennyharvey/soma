@@ -2,8 +2,85 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    width: calc(100vw - 400px);
+    padding: 40px;
 }
 
 .container {
     flex-grow: 2;
 }
+
+#root .navbar{
+    background-color: #28292b !important;
+}
+.navbar span, .navbar a{
+    color: white !important;
+}
+body {
+    background-color: #222325 !important;
+
+}
+#app {
+    background-color: #222325;
+    color: white !important;
+}
+#app td, #app th{
+    color: white !important;
+}
+#app table, #app th, #app tr, #app td  {
+    border-color: #363636 !important;
+}
+/* 
+
+
+.soma-app{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". .";
+}
+body {
+    background-color: #313131 !important;
+
+}
+#app {
+    background-color: #242429;
+    color: white !important;
+}
+#app td, #app th{
+    color: white !important;
+}
+#app table, #app th, #app tr, #app td  {
+    border-color: #363636 !important;
+}
+.soma-sidemenu{
+    height: 100vh;
+    background-color: #1f1f23;
+    padding-left: 0;
+    width: 300px;
+    position: fixed;
+}
+.soma-sidemenu-item{
+    height: 50px;
+    background-color: #242429;
+    cursor: pointer;
+    color: white !important;
+    border-top: solid 1px #2b2b2b;
+    padding-top: 10px;
+}
+.soma-sidemenu-item a{
+    color: #dadada !important;;
+    padding-left: 10px;
+}
+
+.soma-sidemenu-item:hover{
+    height: 50px;
+    background-color: #4a4a50;
+    cursor: pointer;
+}
+.soma-content {
+    margin-left: 300px;
+    width: calc(100vw - 320px);
+} */
