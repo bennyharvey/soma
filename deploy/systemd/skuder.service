@@ -1,10 +1,10 @@
 [Unit]
-Description=Zurabiy streamer (%i)
+Description=SOMA skuder
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/sbin/streamer -c /etc/zurabiy/streamer/%i.conf
+ExecStart=/usr/bin/skuder -c /etc/soma.d/skuder/skuder.conf
 Restart=on-failure
 RestartSec=10s
 

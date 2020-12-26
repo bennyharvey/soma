@@ -1,10 +1,10 @@
 [Unit]
-Description=Zurabiy facer (%i)
+Description=SOMA streamer (%i)
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/sbin/facer -c /etc/zurabiy/facer/%i.conf
+ExecStart=/usr/bin/streamer -c /etc/soma.d/streamer/%i.conf
 Restart=on-failure
 RestartSec=10s
 

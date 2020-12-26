@@ -4,3 +4,6 @@ build
 cmd/facer/facer
 cmd/skuder/skuder
 cmd/streamer/streamer
+deploy/configs/facer/
+deploy/configs/streamer/
+deploy/configs/skuder/
