@@ -7,10 +7,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/bennyharvey/soma/facer"
-	"github.com/bennyharvey/soma/rmq"
+	"../../facer"
+	"../../rmq"
 
-	"github.com/bennyharvey/soma/dlib"
+	"../../dlib"
 
 	"github.com/sirupsen/logrus"
 )
@@ -28,7 +28,9 @@ func main() {
 
 	flag.StringVar(&configPath, "c", "", "config file path")
 	flag.Parse()
-
+	
+	// logrus.Info(configPath)
+	
 	c, err := loadConfig(configPath)
 	if err != nil {
 		logrus.WithError(err).Fatal("failed to load config")

@@ -12,7 +12,7 @@ import (
 	"github.com/bennyharvey/soma/dlib"
 	"github.com/bennyharvey/soma/entity"
 	"github.com/bennyharvey/soma/file"
-	"github.com/bennyharvey/soma/pg"
+	"../../pg"
 	"github.com/bennyharvey/soma/rmq"
 	"github.com/bennyharvey/soma/sigur"
 	"github.com/bennyharvey/soma/skuder"
@@ -72,12 +72,12 @@ func main() {
 
 	logrus.Info("pg_storage created")
 
-	err = pgStorage.Migrate()
-	if err != nil {
-		logrus.WithError(err).Fatal("failed to migrate pg_storage")
-	}
+	// err = pgStorage.Migrate()
+	// if err != nil {
+	// 	logrus.WithError(err).Fatal("failed to migrate pg_storage")
+	// }
 
-	logrus.Info("pg_storage migrated")
+	// logrus.Info("pg_storage migrated")
 
 	err = pgStorage.LoadPersonFaces()
 	if err != nil {
