@@ -33,15 +33,15 @@ const (
 // OpenPassage opens passge
 func (po *PassageOpener) OpenPassage() error {
 	
-	res, err := http.Get("http://" + po.BaseURI + openAPIPath)
-	if err != nil {
-		return fmt.Errorf("HTTP request: %w", err)
-	}
+	// res, err := http.Get("http://" + po.BaseURI + openAPIPath)
+	// if err != nil {
+	// 	return fmt.Errorf("HTTP request: %w", err)
+	// }
 
-	if res.StatusCode != 200 {
-		return fmt.Errorf("expected 200 status code but got %d",
-			res.StatusCode)
-	}
+	// if res.StatusCode != 200 {
+	// 	return fmt.Errorf("expected 200 status code but got %d",
+	// 		res.StatusCode)
+	// }
 
 	po.lastOpen = time.Now()
 

@@ -279,21 +279,26 @@ func (s *Server) getAPIPersonFaces(c echo.Context) error {
 }
 
 func (s *Server) postAPIPersonFaces(c echo.Context) error {
+	s.log.Info("postAPIPersonFaces step 1")
+
 	personID, err := strconv.ParseInt(c.Param("person_id"),
 		10, 64)
 	if err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, "parse person_id: "+err.Error())
 	}
+	s.log.Info("postAPIPersonFaces step 1.1")
 
 	photoBytes, err := ioutil.ReadAll(c.Request().Body)
 	if err != nil {
 		return fmt.Errorf("read all request body: %w", err)
 	}
+	s.log.Info("postAPIPersonFaces step 1.2")
 
 	photo, err := gocv.IMDecode(photoBytes, gocv.IMReadUnchanged)
 	if err != nil {
 		return fmt.Errorf("decode photo: %w", err)
 	}
+	s.log.Info("postAPIPersonFaces step 1.3")
 
 	defer func() {
 		err := photo.Close()
@@ -301,11 +306,13 @@ func (s *Server) postAPIPersonFaces(c echo.Context) error {
 			s.log.WithError(err).Error("failed to close gocv.Mat")
 		}
 	}()
+	s.log.Info("postAPIPersonFaces step 1.4")
 
 	faceDets, err := s.faceDetector.DetectFaces(photo)
 	if err != nil {
 		return fmt.Errorf("face detect: %w", err)
 	}
+	s.log.Info("postAPIPersonFaces step 2")
 
 	var faceDet entity.FaceDetection
 
@@ -345,11 +352,13 @@ func (s *Server) postAPIPersonFaces(c echo.Context) error {
 	if faceDet.Rectangle.Max.Y > photo.Rows() {
 		faceDet.Rectangle.Max.Y = photo.Rows()
 	}
+	s.log.Info("postAPIPersonFaces step 3")
 
 	descriptor, err := s.faceRecognizer.RecognizeFace(photo.Region(faceDet.Rectangle))
 	if err != nil {
 		return fmt.Errorf("faceRecongizer.RecognizeFace: %w", err)
 	}
+	s.log.Info("postAPIPersonFaces step 4")
 
 	photoMD5Sum := md5.Sum(photoBytes)
 	photoID := hex.EncodeToString(photoMD5Sum[:])
@@ -359,6 +368,7 @@ func (s *Server) postAPIPersonFaces(c echo.Context) error {
 		return fmt.Errorf(
 			"photoStorage.AddPhoto: %w", err)
 	}
+	s.log.Info("postAPIPersonFaces step 5")
 
 	pf, err := s.dbStorage.AddPersonFace(entity.PersonFace{
 		PersonID:   personID,
@@ -368,6 +378,7 @@ func (s *Server) postAPIPersonFaces(c echo.Context) error {
 	if err != nil {
 		return fmt.Errorf("dbStorage.AddPersonFace: %w", err)
 	}
+	s.log.Info("postAPIPersonFaces step 6")
 
 	return c.JSON(http.StatusOK, pf)
 }

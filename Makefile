@@ -8,6 +8,8 @@ all: install streamer facer skuder ## Build all binaries to "./deploy/build" dir
 	
 install: mk_conf_dir mk_build_dir ## Prepare dirs
 
+rebuild: stop all deploy_bin start ## rebuild, deploy all binaries and restart server
+
 start: ## start
 	@bash deploy/scripts/start.sh
 
