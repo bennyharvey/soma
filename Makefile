@@ -10,6 +10,10 @@ install: mk_conf_dir mk_build_dir ## Prepare dirs
 
 rebuild: stop all deploy_bin start ## rebuild, deploy all binaries and restart server
 
+restart: stop start ## restart all services
+
+conf_unsafe: stop clear_deployed_conf deploy_conf start ## !! hard redeploy all conf files
+
 start: ## start
 	@bash deploy/scripts/start.sh
 
@@ -42,13 +46,18 @@ deploy_bin: ## Copy built binaries to /usr/bin/*
 	@sudo cp deploy/build/skuder /usr/bin/skuder
 
 deploy_conf: ## Copy files from deploy/configs/* to /etc/soma.d/* 
-	@sudo cp -R deploy/configs/. /etc/soma.d/
+	@sudo mkdir -p /etc/soma.d/facer
+	@sudo mkdir -p /etc/soma.d/streamer
+	@sudo mkdir -p /etc/soma.d/skuder
+	@sudo cp -R deploy/configs/facer/*.conf /etc/soma.d/facer/
+	@sudo cp -R deploy/configs/streamer/*.conf /etc/soma.d/streamer/
+	@sudo cp -R deploy/configs/skuder/*.conf /etc/soma.d/skuder/
 
 deploy_services: ## Copy systemd service files to /etc/systemd/system/
 	@sudo cp -R deploy/systemd/. /etc/systemd/system/
 
 clear_deployed_conf: ## !! Delete all files in /etc/soma.d/ 
-	@sudo rm -r /etc/soma.d/*
+	@sudo rm -rvf /etc/soma.d/*
 
 mk_build_dir:
 	@mkdir -p deploy/build

@@ -5,5 +5,7 @@ cmd/facer/facer
 cmd/skuder/skuder
 cmd/streamer/streamer
 deploy/configs/facer/
+deploy/configs/facer_purg/
 deploy/configs/streamer/
+deploy/configs/streamer_purg/
 deploy/configs/skuder/
