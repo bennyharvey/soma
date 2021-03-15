@@ -66,6 +66,7 @@ func (rfh *RecognizedFaceHandler) HandleRecognizedFace(rf entity.RecognizedFace)
 		"recognize_duration": rf.RecognizeTime.Sub(rf.DetectTime),
 	})
 
+
 	err := rfh.photoStorage.AddPhoto(photoID, rf.Photo)
 	if err != nil {
 		log.WithError(err).Error("failed to add photo to photo storage")
@@ -106,6 +107,8 @@ func (rfh *RecognizedFaceHandler) addFaceRecognizeEvent(log *logrus.Entry, rf en
 		log.WithError(err).Error("failed to JSON marshal face recognized data")
 		return
 	}
+
+	rf.PassageID
 
 	err = rfh.dbStorage.AddEvent(entity.Event{
 		Time: time.Now(),

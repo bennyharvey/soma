@@ -31,7 +31,7 @@ func NewFrameHandler(fd FaceDetector, dfp DetectedFacePublisher) *FrameHandler {
 	}
 }
 
-func (fh *FrameHandler) HandleFrame(frame gocv.Mat) {
+func (fh *FrameHandler) HandleFrame(frame gocv.Mat, passageID string) {
 	frameTime := time.Now()
 
 	ds, err := fh.faceDetector.DetectFaces(frame)
@@ -39,6 +39,7 @@ func (fh *FrameHandler) HandleFrame(frame gocv.Mat) {
 		fh.log.WithError(err).Error("failed to detect faces")
 		return
 	}
+
 
 	detectTime := time.Now()
 
@@ -59,6 +60,7 @@ func (fh *FrameHandler) HandleFrame(frame gocv.Mat) {
 			DetectConfidence: d.Confidence,
 			DetectTime:       detectTime,
 			FrameTime:        frameTime,
+			PassageID: passageID,
 		})
 	}
 }

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c9cd63d-dad4-48bd-9f9c-d7c1db0b2bec" name="Default Changelist" comment="" />
+    <list default="true" id="9c9cd63d-dad4-48bd-9f9c-d7c1db0b2bec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/scripts/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/scripts/start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entity/event.go" beforeDir="false" afterPath="$PROJECT_DIR$/entity/event.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facer/detected_face_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/facer/detected_face_handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pg/pg.go" beforeDir="false" afterPath="$PROJECT_DIR$/pg/pg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skuder/recognized_face_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/skuder/recognized_face_handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/streamer/frame_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/streamer/frame_handler.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +18,9 @@
   <component name="GOROOT" url="file:///usr/local/Cellar/go/1.15.6/libexec" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../github.com/bennyharvey/soma/gocv/stream.go" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1pe4zG2HT1VEFX5QiKsYGMuc4ah" />
   <component name="ProjectViewState">
@@ -20,9 +31,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/face" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">

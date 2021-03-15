@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5eafd841-5321-4e1d-980e-caeec5e60ae3" name="soma">
+        <fileTransfer rootFolder="/home/tat/soma-v2" accessType="SFTP" host="192.168.114.127" port="22" sshConfigId="7f628370-59c8-4090-a886-7f2443e824cb" sshConfig="tat@192.168.114.127:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

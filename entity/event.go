@@ -41,6 +41,7 @@ type PersonRecognizeData struct {
 type Event struct {
 	ID   int64           `json:"id" db:"id"`
 	Time time.Time       `json:"time" db:"time"`
+	PassageID string `json:"passageID" db:"passage_id"`
 	Type EventType       `json:"type" db:"type"`
 	Data json.RawMessage `json:"data" db:"data"`
 }

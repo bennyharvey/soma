@@ -106,7 +106,7 @@ func (s *Storage) FindClosestPersonFace(fd entity.FaceDescriptor) (entity.Person
 }
 
 func (s *Storage) AddEvent(e entity.Event) error {
-	_, err := s.db.Exec(`insert into event (time, type, data) values ($1, $2, $3)`, e.Time, e.Type, e.Data)
+	_, err := s.db.Exec(`insert into event (time, type, passage_id , data) values ($1, $2, $3, $4)`, e.Time, e.Type, e.PassageID, e.Data)
 	return err
 }
 
