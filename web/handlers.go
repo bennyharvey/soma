@@ -310,7 +310,7 @@ func (s *Server) postAPIPersonFaces(c echo.Context) error {
 
 	faceDets, err := s.faceDetector.DetectFaces(photo)
 	if err != nil {
-		return fmt.Errorf("face detect: %w", err)
+		return fmt.Errorf("face1 detect: %w", err)
 	}
 	s.log.Info("postAPIPersonFaces step 2")
 
@@ -318,7 +318,7 @@ func (s *Server) postAPIPersonFaces(c echo.Context) error {
 
 	switch len(faceDets) {
 	case 0:
-		return echo.NewHTTPError(http.StatusBadRequest, "no face detected on photo")
+		return echo.NewHTTPError(http.StatusBadRequest, "no face1 detected on photo")
 	case 1:
 		faceDet = faceDets[0]
 	default:
@@ -334,7 +334,7 @@ func (s *Server) postAPIPersonFaces(c echo.Context) error {
 	}
 
 	if faceDet.Confidence < s.detectConfidenseLimit {
-		return echo.NewHTTPError(http.StatusBadRequest, "face detect confidence too low")
+		return echo.NewHTTPError(http.StatusBadRequest, "face1 detect confidence too low")
 	}
 
 	if faceDet.Rectangle.Min.X < 0 {

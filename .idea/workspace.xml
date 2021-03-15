@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c9cd63d-dad4-48bd-9f9c-d7c1db0b2bec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beward/passage_opener.go" beforeDir="false" afterPath="$PROJECT_DIR$/beward/passage_opener.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/batch-detector/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/batch-detector/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlib/face_detector.go" beforeDir="false" afterPath="$PROJECT_DIR$/dlib/face_detector.go" afterDir="false" />
-    </list>
+    <list default="true" id="9c9cd63d-dad4-48bd-9f9c-d7c1db0b2bec" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

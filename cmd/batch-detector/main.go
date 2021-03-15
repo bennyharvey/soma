@@ -14,18 +14,18 @@ import (
 	"github.com/sirupsen/logrus"
 	"gocv.io/x/gocv"
 
-	//"git.tattelecom.ru/dimuls/face"
+	//"git.tattelecom.ru/dimuls/face1"
 
 	zurabiyGocv "github.com/bennyharvey/soma/gocv"
 )
 
 type frameHandler struct {
 	window   *gocv.Window
-	detector *face.BatchDetector
+	detector *face1.BatchDetector
 	log      *logrus.Entry
 }
 
-func newFrameHandler(streamID string, d *face.BatchDetector) *frameHandler {
+func newFrameHandler(streamID string, d *face1.BatchDetector) *frameHandler {
 	return &frameHandler{
 		window:   gocv.NewWindow(streamID),
 		detector: d,
@@ -45,7 +45,7 @@ func (fh *frameHandler) HandleFrame(frame gocv.Mat) {
 	}
 
 	var (
-		ds   []face.Detection
+		ds   []face1.Detection
 		more bool
 	)
 
@@ -90,7 +90,7 @@ func (fh *frameHandler) HandleFrame(frame gocv.Mat) {
 }
 
 func main() {
-	detector, err := face.NewBatchDetector(os.Args[1], image.Point{X: 640, Y: 480}, len(os.Args)-2, 100*time.Millisecond)
+	detector, err := face1.NewBatchDetector(os.Args[1], image.Point{X: 640, Y: 480}, len(os.Args)-2, 100*time.Millisecond)
 	if err != nil {
 		logrus.WithError(err).Fatal("failed to create detector")
 	}
