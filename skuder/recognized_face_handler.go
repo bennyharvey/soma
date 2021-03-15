@@ -104,7 +104,7 @@ func (rfh *RecognizedFaceHandler) addFaceRecognizeEvent(log *logrus.Entry, rf en
 		DetectConfidence: rf.DetectConfidence,
 	})
 	if err != nil {
-		log.WithError(err).Error("failed to JSON marshal face1 recognized data")
+		log.WithError(err).Error("failed to JSON marshal face recognized data")
 		return
 	}
 
@@ -116,11 +116,11 @@ func (rfh *RecognizedFaceHandler) addFaceRecognizeEvent(log *logrus.Entry, rf en
 		Data: data,
 	})
 	if err != nil {
-		log.WithError(err).Error("failed to add face1 recognized event")
+		log.WithError(err).Error("failed to add face recognized event")
 		return
 	}
 
-	log.Info("face1 recognized")
+	log.Info("face recognized")
 }
 
 func (rfh *RecognizedFaceHandler) addPersonRecognizeEvent(log *logrus.Entry, rf entity.RecognizedFace,

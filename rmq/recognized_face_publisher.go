@@ -72,7 +72,7 @@ func (p *RecognizedFacePublisher) Stop() {
 func (p *RecognizedFacePublisher) PublishRecognizedFace(rf entity.RecognizedFace) {
 	fJSON, err := json.Marshal(rf)
 	if err != nil {
-		p.log.WithError(err).Error("failed to JSON marshal recognized face1")
+		p.log.WithError(err).Error("failed to JSON marshal recognized face")
 		return
 	}
 
@@ -80,7 +80,7 @@ func (p *RecognizedFacePublisher) PublishRecognizedFace(rf entity.RecognizedFace
 		Body: fJSON,
 	})
 	if err != nil {
-		p.log.WithError(err).Error("failed to publish recognized face1")
+		p.log.WithError(err).Error("failed to publish recognized face")
 		return
 	}
 }

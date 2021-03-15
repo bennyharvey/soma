@@ -14,7 +14,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"gocv.io/x/gocv"
 
-	//"git.tattelecom.ru/dimuls/face1"
+	//"git.tattelecom.ru/dimuls/face"
 
 	zurabiyGocv "github.com/bennyharvey/soma/gocv"
 )

@@ -54,7 +54,7 @@ func (dfh *DetectedFaceHandler) HandleDetectedFace(df entity.DetectedFace) {
 
 	descr, err := dfh.faceRecognizer.RecognizeFace(photo)
 	if err != nil {
-		dfh.log.WithError(err).Error("failed to recognize face1")
+		dfh.log.WithError(err).Error("failed to recognize face")
 		return
 	}
 

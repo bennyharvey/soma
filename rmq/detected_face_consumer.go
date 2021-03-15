@@ -78,7 +78,7 @@ func NewDetectedFaceConsumer(uri, exchange, passageID string, dfh DetectedFaceHa
 				err := json.Unmarshal(d.Body, &df)
 				if err != nil {
 					log.WithError(err).Errorf(
-						"failed to JSON unmarshal detected face1")
+						"failed to JSON unmarshal detected face")
 					continue
 				}
 

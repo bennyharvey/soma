@@ -72,7 +72,7 @@ func (p *DetectedFacePublisher) Stop() {
 func (p *DetectedFacePublisher) PublishDetectedFace(df entity.DetectedFace) {
 	fJSON, err := json.Marshal(df)
 	if err != nil {
-		p.log.WithError(err).Error("failed to JSON marshal detected face1")
+		p.log.WithError(err).Error("failed to JSON marshal detected face")
 		return
 	}
 
@@ -80,7 +80,7 @@ func (p *DetectedFacePublisher) PublishDetectedFace(df entity.DetectedFace) {
 		Body: fJSON,
 	})
 	if err != nil {
-		p.log.WithError(err).Error("failed to publish detected face1")
+		p.log.WithError(err).Error("failed to publish detected face")
 		return
 	}
 }
