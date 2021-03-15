@@ -6,7 +6,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"gocv.io/x/gocv"
 
-	"git.tattelecom.ru/dimuls/face"
+	"github.com/bennyharvey/soma/face"
 
 	"github.com/bennyharvey/soma/entity"
 )

@@ -6,14 +6,15 @@ import (
 	"image/color"
 	"os"
 	"os/signal"
+	"soma/face"
+
 	"strconv"
 	"syscall"
 	"time"
-
 	"github.com/sirupsen/logrus"
 	"gocv.io/x/gocv"
 
-	"git.tattelecom.ru/dimuls/face"
+	//"git.tattelecom.ru/dimuls/face"
 
 	zurabiyGocv "github.com/bennyharvey/soma/gocv"
 )
@@ -99,11 +100,11 @@ func main() {
 	var fhs []*frameHandler
 	var ss []*zurabiyGocv.Stream
 
-	for i, uri := range os.Args[2:] {
+	for i, _ := range os.Args[2:] {
 		id := strconv.Itoa(i)
 		fh := newFrameHandler(id, detector)
 		fhs = append(fhs, fh)
-		ss = append(ss, zurabiyGocv.NewStream(id, uri, 10*time.Second, 25, fh))
+		//ss = append(ss, zurabiyGocv.NewStream(id, uri, 10*time.Second, 25, fh))
 	}
 
 	signals := make(chan os.Signal)

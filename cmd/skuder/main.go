@@ -18,8 +18,8 @@ import (
 	"github.com/bennyharvey/soma/skuder"
 	// "github.com/bennyharvey/soma/web"
 	"../../web"
-	"github.com/bennyharvey/soma/z5r"
-	"github.com/bennyharvey/soma/beward"
+	"soma/z5r"
+	"soma/beward"
 )
 
 func main() {

@@ -1,11 +1,8 @@
 package beward
 
 import (
-	"fmt"
-	"net/http"
+	"soma/entity"
 	"time"
-
-	"github.com/bennyharvey/soma/entity"
 )
 
 // PassageOpener passge opener
